@@ -23,7 +23,7 @@ button {
   border: none;
   padding-top: 10px;
   padding-bottom: 10px;
-  color: white;
+  color: #ffffff;
   font-weight: bold;
   width: 200px;
   margin-bottom: 5px;
@@ -34,17 +34,17 @@ button {
   margin: auto;
   padding: 20px;
   max-width: 220px;
-  background-color: hsl(30, 13%, 34%);
+  background-color: #62574b;
   color: white;
   border-radius: 20px;
-  border: 2px solid rgb(158, 151, 144);
-  box-shadow: 4px 6px 4px 2px hsl(0, 0%, 0%, 0.4);
+  border: 2px solid #9e9790;
+  box-shadow: 4px 6px 4px 2px #00000066;
 }
 
 #increment-btn {
-  background: hsl(22, 43%, 20%);
+  background: #492d1d;
 }
 
 #save-btn {
-  background: rgb(34, 79, 88);
+  background: #215059;
 }
