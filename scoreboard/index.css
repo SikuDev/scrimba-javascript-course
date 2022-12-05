@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+@font-face {
+  font-family: Score;
+  src: url(./font/CursedTimerUlil-Aznm.ttf);
+}
+
+@font-face {
+  font-family: Teams;
+  src: url(./font/Graduate-Regular.ttf);
+}
+
+h1 {
+  font-size: 90px;
+  text-align: right;
+  position: relative;
+  top: 20px;
+  right: 20px;
+}
+
+h3 {
+  font-size: 46px;
+}
+
+html {
+  font-family: Teams;
+}
+
+body {
+  margin: 0;
+  background-color: hsl(216, 70%, 20%);
+  background-image: url(./images/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+}
+
+button {
+  font-family: Score;
+  font-size: 20px;
+  min-width: 45px;
+  height: 40px;
+  background-color: transparent;
+  color: #9AABD8;
+  border: 2px solid #9AABD8;
+  border-radius: 5px;
+  transition: all 0.05s ease-in-out;
+}
+
+button:hover {
+  color: #ccd4eb;
+  border-color: #ccd4eb;
+}
+
+button:active {
+  color: #ffffff;
+  border-color: #ffffff;
+  box-shadow: 0 0 4px 0 white;
+}
+
+.container {
+  padding: 0 50px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-around;
+  max-width: 575px;
+  min-height: 350px;
+  align-items: center;
+  background-color: #1B244A;
+  color: white;
+  border-radius: 5px;
+  border: 4px solid white;
+}
+
+.center-column {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.logo {
+  max-width: 70%;
+}
+
+.reset {
+  padding: 8px 10px;
+  font-size: 20px;
+}
+
+.side-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 26px;
+}
+
+.score {
+  font-family: Score;
+  display: grid;
+  width: 155;
+  height: 120;
+  background-color: #080001;
+  color: #F94F6D;
+  border-radius: 5px;
+}
+
+.red {
+  grid-area: 1 / 1;
+  z-index: 2;
+  text-shadow: 0px 0px 10px red;
+}
+
+.grey {
+  grid-area: 1 / 1;
+  color:#212121;
+  z-index: 1;
+}
+
+.buttons {
+  display: flex;
+  width: 155px;
+  justify-content: space-around;
+}
