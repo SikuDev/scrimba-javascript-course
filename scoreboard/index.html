@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <meta name="darkreader-lock">
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -14,9 +15,9 @@
       <div>
         <h3 class="title">HOME</h3>
 
-        <div class="scorecard">
+        <div class="scorecard" id="home-scorecard">
           <h1 class="score faded">00</h1>
-          <h1 class="score" id="home-score">0</h1>
+          <h1 class="score red" id="home-score">0</h1>
         </div>
 
         <div class="score-buttons">
@@ -31,7 +32,7 @@
 
         <div class="scorecard">
           <h2 class="score faded">00</h2>
-          <h2 class="score" id="home-fouls">0</h2>
+          <h2 class="score red" id="home-fouls">0</h2>
         </div>
 
         <div class="single">
@@ -46,7 +47,7 @@
       <div>
         <div class="scorecard">
           <h1 class="score faded">00:00</h1>
-          <h1 class="score" id="timer">00:00</h1>
+          <h1 class="score red" id="timer">00:00</h1>
         </div>
 
         <div class="time-controls">
@@ -72,9 +73,9 @@
 
       <div>
         <h3 class="title">GUEST</h3>
-        <div class="scorecard">
+        <div class="scorecard" id="guest-scorecard">
           <h1 class="score faded">00</h1>
-          <h1 class="score" id="guest-score">0</h1>
+          <h1 class="score red" id="guest-score">0</h1>
         </div>
 
         <div class="score-buttons">
@@ -89,7 +90,7 @@
 
         <div class="scorecard">
           <h2 class="score faded">00</h2>
-          <h2 class="score" id="guest-fouls">0</h2>
+          <h2 class="score red" id="guest-fouls">0</h2>
         </div>
 
         <div class="single">

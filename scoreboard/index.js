@@ -1,14 +1,14 @@
-const homeScoreEl = document.querySelector("#home-score");
+const homeScoreEl = document.getElementById("home-score");
 const guestScoreEl = document.getElementById("guest-score");
 
-const homeScoreStyle = document.querySelector(".side-column.home > .score");
-const guestScoreStyle = document.querySelector(".side-column.guest > .score");
+const homeScoreStyle = document.getElementById("home-scorecard");
+const guestScoreStyle = document.getElementById("guest-scorecard");
 
-const homeFoulsEl = document.querySelector("#home-fouls");
-const guestFoulsEl = document.querySelector("#guest-fouls");
+const homeFoulsEl = document.getElementById("home-fouls");
+const guestFoulsEl = document.getElementById("guest-fouls");
 
-const timerEl = document.querySelector("#timer");
-const periodEl = document.querySelector("#period");
+const timerEl = document.getElementById("timer");
+const periodEl = document.getElementById("period");
 
 let playing = false;
 let paused = false;
@@ -18,17 +18,17 @@ function reset() {
 	guestScoreEl.textContent = 0;
 	homeFoulsEl.textContent = 0;
 	guestFoulsEl.textContent = 0;
-  playing = false;
-  paused = true;
-  timerEl.textContent = "00:00";
-  periodEl.textContent = 0;
+	playing = false;
+	paused = true;
+	timerEl.textContent = "00:00";
+	periodEl.textContent = 0;
 
-  const interval_id = window.setInterval(function () {},
-  Number.MAX_SAFE_INTEGER);
+	const interval_id = window.setInterval(function () {},
+	Number.MAX_SAFE_INTEGER);
 
-  for (let i = 0; i < interval_id; i++) {
-    window.clearInterval(i);
-  }
+	for (let i = 0; i < interval_id; i++) {
+		window.clearInterval(i);
+	}
 
 	highlightLeader();
 }
@@ -53,28 +53,28 @@ function highlightLeader() {
 		case 0:
 			if (homeScore > 0 || (guestScore > 0 && (scoreDiff = 0))) {
 				homeScoreStyle.style.borderColor = "#41D2FA";
-				homeScoreStyle.style.boxShadow = "0 0 10px 0 cyan";
+				homeScoreStyle.style.boxShadow = "0 0 1rem 0 cyan";
 				guestScoreStyle.style.borderColor = "#41D2FA";
-				guestScoreStyle.style.boxShadow = "0 0 10px 0 cyan";
+				guestScoreStyle.style.boxShadow = "0 0 1rem 0 cyan";
 			} else {
 				homeScoreStyle.style.borderColor = "#212121";
-				homeScoreStyle.style.boxShadow = "0 0 10px 0 #212121";
+				homeScoreStyle.style.boxShadow = "0 0 1rem 0 #212121";
 				guestScoreStyle.style.borderColor = "#212121";
-				guestScoreStyle.style.boxShadow = "0 0 10px 0 #212121";
+				guestScoreStyle.style.boxShadow = "0 0 1rem 0 #212121";
 				guestScoreStyle;
 			}
 			break;
 		case -1:
 			guestScoreStyle.style.borderColor = "#50FA6E";
-			guestScoreStyle.style.boxShadow = "0 0 10px 0 #50FA6E";
+			guestScoreStyle.style.boxShadow = "0 0 1rem 0 #50FA6E";
 			homeScoreStyle.style.borderColor = "#F94F6D";
-			homeScoreStyle.style.boxShadow = "0 0 10px 0 red";
+			homeScoreStyle.style.boxShadow = "0 0 2rem 0 red";
 			break;
 		case 1:
 			homeScoreStyle.style.borderColor = "#50FA6E";
-			homeScoreStyle.style.boxShadow = "0 0 10px 0 #50FA6E";
+			homeScoreStyle.style.boxShadow = "0 0 1rem 0 #50FA6E";
 			guestScoreStyle.style.borderColor = "#F94F6D";
-			guestScoreStyle.style.boxShadow = "0 0 10px 0 red";
+			guestScoreStyle.style.boxShadow = "0 0 2rem 0 red";
 	}
 }
 

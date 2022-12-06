@@ -82,15 +82,19 @@ body {
   row-gap: 2rem;
 }
 
+.red {
+  text-shadow: 0 0 1rem hsla(0, 100%, 50%, 0.5);
+  color:#F94F6D;
+}
+
 .scorecard {
   width: fit-content;
   display: grid;
-  color:#F94F6D;
   background-color: #080001;
   justify-content: right;
   align-items: center;
   border-radius: 1rem;
-  border: 0.3rem solid #212121;text-align: right;
+  border: 0.4rem solid #212121;text-align: right;
 }
 
 .score {
@@ -135,13 +139,13 @@ button:hover {
   cursor: pointer;
   color: #dee2ed;
   background-color: hsl(216, 69%, 50%);
-  box-shadow: 0px 4px 0 3px hsl(216, 82%, 32%);
+  box-shadow: 0px 0.4rem 0 0.3rem hsl(216, 82%, 32%);
 }
 
 button:active {
   color: #ffffff;
-  box-shadow: 0px 2px 0 3px hsl(216, 82%, 42%);
-  top: 4px;
+  box-shadow: 0px 0.1rem 0 0.3rem hsl(216, 82%, 42%);
+  top: 0.3rem;
 }
 
 .small {
