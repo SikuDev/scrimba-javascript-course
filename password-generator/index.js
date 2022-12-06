@@ -14,6 +14,8 @@ const symbolsCheck = document.getElementById("symbols-chk")
 
 const passwordLengthBox = document.getElementById("password-length")
 
+const popupEl = document.getElementById("popup")
+
 let selectedCharacters = []
 
 generateBtn.addEventListener("click", generatePasswords)
@@ -23,9 +25,17 @@ passwordTwo.addEventListener("click", copyToClipboard)
 function generatePasswords() {
   let passwordLength = passwordLengthBox.value;
 
+  if (passwordLength > 32) {
+    passwordLength = 32
+  }
+  if (passwordLength < 4) {
+    passwordLength = 4
+  }
+  passwordLengthBox.value = passwordLength
+
   setCharacters()
   clearPasswords()
-  
+
   for (let i = 0; i < passwordLength; i++) {
     let randomIndexOne = Math.floor(Math.random() * (selectedCharacters.length))
     let randomIndexTwo = Math.floor(Math.random() * (selectedCharacters.length))
@@ -53,6 +63,20 @@ function clearPasswords() {
   passwordTwo.textContent = ""
 }
 
-async function copyToClipboard(){
-  await navigator.clipboard.writeText(this.textContent);
- };
+async function copyToClipboard() {
+  if (this.textContent != "") {
+    await navigator.clipboard.writeText(this.textContent);
+    popupEl.textContent = "Copied to clipboard"
+    popupEl.style.opacity = 100
+    setTimeout(() => {
+      popupEl.style.opacity = 0
+    }, 2000)
+    clearPasswords()
+  } else {
+    popupEl.textContent = "Nothing to copy"
+    popupEl.style.opacity = 100
+    setTimeout(() => {
+      popupEl.style.opacity = 0
+    }, 2000)
+  }
+};

@@ -8,7 +8,7 @@
 <body>
     <div class="container">
         <h1>Generate a <br><span class="green">random password</span></h1>
-        <p>Never use an insecure password again.</p>
+        <h2>Never use an insecure password again.</h2>
 
         <div class="options">
             
@@ -25,19 +25,24 @@
                 </label>
             </div>
             <label class="label-number" for="length">
-                <input type="number" name="length" id="password-length" min="4" max="32" value="15" autocomplete="off">
                 Length
+                <input type="number" name="length" id="password-length" min="4" max="32" value="15" autocomplete="off">
+                <small>(4 - 32)</small>
             </label>
         </div>
 
         <hr>
+
+        <p>Click on the password you prefer to copy to clipboard.</p>
 
         <div class="passwords">
             <button class="password-btn" id="password-one"></button>
             <button class="password-btn" id="password-two"></button>
         </div>
     </div>
-
+    <div class="popup" id="popup">
+        Copied to clipboard
+    </div>
     <script src="index.js"></script>
 </body>
 

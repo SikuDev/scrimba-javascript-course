@@ -14,6 +14,7 @@ html {
   font-family: "Inter";
 	font-size: 10px;
   color:white;
+  user-select: none;
 }
 
 h1 {
@@ -30,13 +31,18 @@ h1 {
 	color: #4adf86;
 }
 
-p {
+h2 {
 	font-style: normal;
 	font-weight: 400;
 	font-size: 2rem;
 	line-height: 2.8rem;
 	color: #d5d4d8;
   margin-bottom: 2rem;
+}
+
+p {
+  font-size: 1.6rem;
+  color: #d5d4d8;
 }
 
 body {
@@ -59,6 +65,7 @@ hr {
 }
 
 button {
+  padding: 0 1rem 0;
 	font-family: "Inter";
 	font-style: normal;
 	font-weight: 500;
@@ -81,13 +88,19 @@ button {
 
 .password-btn {
 	width: 21rem;
-	height: 4rem;
+	min-height: 4rem;
 	background: #273549;
 	color: #55f991;
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 32px;
 	text-align: center;
+  transition: all 0.2s ease-in-out;
+  word-break: break-all;
+}
+
+.password-btn:hover {
+  background: hsl(215, 30%, 24%);
 }
 
 .options {
@@ -135,3 +148,19 @@ input[type=number] {
   color: white;
 }
 
+.popup {
+  padding: 1rem;
+  font-size: 1.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 99;
+  top: 35rem;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background-color:#2f3e53;
+  color: #55f991;
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
