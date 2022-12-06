@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:wght@800&display=swap");
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border-radius: 0.6rem;
+	border: 0;
+}
+
+html {
+  font-family: "Inter";
+	font-size: 10px;
+  color:white;
+}
+
+h1 {
+	font-family: "Karla";
+	font-style: normal;
+	font-weight: 800;
+	font-size: 4rem;
+	line-height: 4rem;
+	letter-spacing: -0.025em;
+	color: #ffffff;
+}
+
+.green {
+	color: #4adf86;
+}
+
+p {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 2rem;
+	line-height: 2.8rem;
+	color: #d5d4d8;
+  margin-bottom: 2rem;
+}
+
+body {
+	background-color: #1c1c1c;
+}
+
+hr {
+	height: 1px;
+	background: #2f3e53;
+  margin: 1rem 0;
+}
+
+.container {
+	margin: 5rem auto;
+	padding: 6rem 5rem 3rem;
+	width: 55rem;
+	background-color: #1f2937;
+	display: grid;
+  row-gap: 2rem;
+}
+
+button {
+	font-family: "Inter";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 1.6rem;
+	line-height: 2.4rem;
+	color: #ffffff;
+}
+
+.generate {
+	width: 21rem;
+	height: 4rem;
+	background: #059669;
+	box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.05);
+}
+
+.passwords {
+	display: flex;
+	justify-content: space-between;
+}
+
+.password-btn {
+	width: 21rem;
+	height: 4rem;
+	background: #273549;
+	color: #55f991;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 32px;
+	text-align: center;
+}
+
+.options {
+  display: flex;
+  column-gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkboxes {
+  display: grid;
+  row-gap: 1.5rem
+}
+
+.label-checkbox {
+  display: flex;
+  font-size: 1.7rem;
+  color: #d5d4d8;
+}
+
+input[type=checkbox] {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+  accent-color: #059669;
+}
+
+.label-number {
+  display: grid;
+  font-size: 1.5rem;
+  row-gap: 0.67rem;
+  color: #d5d4d8;
+  text-align: center;
+}
+
+input[type=number] {
+  font-family: "Inter";
+  font-size: 2rem;
+  text-align: center;
+  width: 5.5rem;
+  height: 3.5rem;
+  border-radius: 0.3rem;
+  border:0;
+  background:#059669;
+  color: white;
+}
+

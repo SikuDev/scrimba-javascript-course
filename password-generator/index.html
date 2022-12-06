@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Generate a <br><span class="green">random password</span></h1>
+        <p>Never use an insecure password again.</p>
+
+        <div class="options">
+            
+            <button class="generate" id="generate-btn">Generate passwords</button>
+
+            <div class="checkboxes">
+                <label class="label-checkbox" for="numbers">
+                    <input type="checkbox" name="numbers" id="numbers-chk" value="true" autocomplete="off" checked>
+                    Numbers
+                </label>
+                <label class="label-checkbox" for="symbols">
+                    <input type="checkbox" name="numbers" id="symbols-chk" value="true" autocomplete="off" checked>
+                    Symbols
+                </label>
+            </div>
+            <label class="label-number" for="length">
+                <input type="number" name="length" id="password-length" min="4" max="32" value="15" autocomplete="off">
+                Length
+            </label>
+        </div>
+
+        <hr>
+
+        <div class="passwords">
+            <button class="password-btn" id="password-one"></button>
+            <button class="password-btn" id="password-two"></button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
