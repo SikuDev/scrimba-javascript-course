@@ -87,7 +87,8 @@ body {
 
 .red {
   text-shadow: 0 0 1rem hsla(0, 100%, 50%, 0.5);
-  color:#F94F6D;
+  /* color:#F94F6D; */
+  color:#4ff971;
 }
 
 .scorecard {
