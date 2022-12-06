@@ -40,9 +40,11 @@ h2 {
 
 h3 {
   font-size: 4rem;
+  filter: drop-shadow(0 0.5rem 1rem #080001);
 }
 
-H4 {
+h4{
+  filter: drop-shadow(0 0.5rem 1rem #080001);
   font-size: 2.5rem;
 }
 
@@ -62,6 +64,7 @@ body {
 #logo {
   max-width: 20rem;
   margin: 2rem 0 1rem;
+  filter: drop-shadow(0 0.5rem 1rem #080001);
 }
 
 .container {
@@ -132,19 +135,19 @@ button {
   border-radius: 0.5rem;
   box-shadow: 0 0.4rem 0 0.3rem #0d3c81;
   position: relative;
-  filter: drop-shadow(0 -3px 2px #08000173);
+  filter: drop-shadow(0 -0.4rem 0.5rem #08000173);
 }
 
 button:hover {
   cursor: pointer;
   color: #dee2ed;
   background-color: hsl(216, 69%, 50%);
-  box-shadow: 0px 0.4rem 0 0.3rem hsl(216, 82%, 32%);
+  box-shadow: 0 0.4rem 0 0.3rem hsl(216, 82%, 32%);
 }
 
 button:active {
   color: #ffffff;
-  box-shadow: 0px 0.1rem 0 0.3rem hsl(216, 82%, 42%);
+  box-shadow: 0 0.1rem 0 0.3rem hsl(216, 82%, 42%);
   top: 0.3rem;
 }
 
@@ -177,11 +180,11 @@ button:active {
   cursor: pointer;
   color: #dee2ed;
   background-color: hsl(340, 69%, 50%);
-  box-shadow: 0px 4px 0 3px hsl(340, 82%, 32%);
+  box-shadow: 0 0.4rem 0 0.3rem hsl(340, 82%, 32%);
 }
 
 #reset-button:active {
   color: #ffffff;
-  box-shadow: 0px 2px 0 3px hsl(340, 82%, 42%);
-  top: 4px;
+  box-shadow: 0 0.2rem 0 0.3rem hsl(340, 82%, 42%);
+  top: 0.4rem;
 }
