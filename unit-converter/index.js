@@ -9,13 +9,13 @@ const massEl = document.getElementById("mass-el")
 convertBtn.addEventListener("click", function(){
   let inputNum = inputEl.value
 
-  let imperialLength = (inputNum * 3.281).toFixed(2)
-  let imperialVolume = (inputNum * 0.264).toFixed(2)
-  let imperialMass = (inputNum * 2.204).toFixed(2)
+  let imperialLength = (inputNum * 3.281).toFixed(3)
+  let imperialVolume = (inputNum * 0.264).toFixed(3)
+  let imperialMass = (inputNum * 2.204).toFixed(3)
   
-  let metricLength = (inputNum / 3.281).toFixed(2)
-  let metricVolume = (inputNum / 0.264).toFixed(2)
-  let metricMass = (inputNum / 2.204).toFixed(2)
+  let metricLength = (inputNum / 3.281).toFixed(3)
+  let metricVolume = (inputNum / 0.264).toFixed(3)
+  let metricMass = (inputNum / 2.204).toFixed(3)
 
   lengthEl.textContent = `${inputNum} meters = ${imperialLength} feet | ${inputNum} feet = ${metricLength} meters`
   
