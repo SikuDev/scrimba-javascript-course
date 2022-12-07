@@ -19,7 +19,7 @@ convertBtn.addEventListener("click", function(){
 
   lengthEl.textContent = `${inputNum} meters = ${imperialLength} feet | ${inputNum} feet = ${metricLength} meters`
   
-  volumeEl.textContent = `${inputNum} meters = ${imperialVolume} feet | ${inputNum} feet = ${metricVolume} meters`
+  volumeEl.textContent = `${inputNum} litres = ${imperialVolume} gallons | ${inputNum} gallons = ${metricVolume} litres`
   
-  massEl.textContent = `${inputNum} meters = ${imperialMass} feet | ${inputNum} feet = ${metricMass} meters`
+  massEl.textContent = `${inputNum} kilograms = ${imperialMass} pounds | ${inputNum} pounds = ${metricMass} kilograms`
 })
