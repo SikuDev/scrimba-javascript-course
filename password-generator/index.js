@@ -13,17 +13,23 @@ const numbersCheck = document.getElementById("numbers-chk")
 const symbolsCheck = document.getElementById("symbols-chk")
 
 const passwordLengthBox = document.getElementById("password-length")
+const decLengthBtn = document.getElementById("dec-length")
+const incLengthBtn = document.getElementById("inc-length")
+
 
 const popupEl = document.getElementById("popup")
 
 let selectedCharacters = []
 
+decLengthBtn.addEventListener("click", decLength)
+incLengthBtn.addEventListener("click", incLength)
 generateBtn.addEventListener("click", generatePasswords)
 passwordOne.addEventListener("click", copyToClipboard)
 passwordTwo.addEventListener("click", copyToClipboard)
 
+
 function generatePasswords() {
-  let passwordLength = passwordLengthBox.value;
+  let passwordLength = Number(passwordLengthBox.textContent);
 
   if (passwordLength > 32) {
     passwordLength = 32
@@ -31,7 +37,7 @@ function generatePasswords() {
   if (passwordLength < 4) {
     passwordLength = 4
   }
-  passwordLengthBox.value = passwordLength
+  passwordLengthBox.textContent = passwordLength
 
   setCharacters()
   clearPasswords()
@@ -79,4 +85,22 @@ async function copyToClipboard() {
       popupEl.style.opacity = 0
     }, 2000)
   }
-};
+}
+
+function decLength() {
+  let length = passwordLengthBox.textContent
+
+  if (length > 4 && length <= 32) {
+    length--
+    passwordLengthBox.textContent = length
+  }
+}
+
+function incLength() {
+  let length = passwordLengthBox.textContent
+
+  if (length >= 4 && length < 32 ) {
+    length++
+    passwordLengthBox.textContent = length
+  }
+}

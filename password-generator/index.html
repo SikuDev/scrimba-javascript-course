@@ -32,8 +32,11 @@
             </div>
             <label class="label-number" for="length">
                 Length
-                <input type="number" name="length" id="password-length" min="4" max="32" value="15" autocomplete="off">
-                <small>(4 - 32)</small>
+                <div class="length-input">
+                    <button class="length-btn dec" id="dec-length">-</button>
+                    <span id="password-length">15</span>
+                    <button class="length-btn inc" id="inc-length">+</button>
+                </div>
             </label>
         </div>
 
