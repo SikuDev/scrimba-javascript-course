@@ -10,10 +10,20 @@ const guestFoulsEl = document.getElementById("guest-fouls");
 const timerEl = document.getElementById("timer");
 const periodEl = document.getElementById("period");
 
-let playing = false;
-let paused = false;
+const gameLength = 12//mins
+let timeLeft = 0;
+
+let active = false;
+let paused = true;
+
+let timerId;
+
+reset();
 
 function reset() {
+
+	clearInterval(timerId)
+	active = false
 	homeScoreEl.textContent = 0;
 	guestScoreEl.textContent = 0;
 	homeFoulsEl.textContent = 0;
@@ -22,15 +32,9 @@ function reset() {
 	paused = true;
 	timerEl.textContent = "00:00";
 	periodEl.textContent = 0;
-
-	const interval_id = window.setInterval(function () {},
-	Number.MAX_SAFE_INTEGER);
-
-	for (let i = 0; i < interval_id; i++) {
-		window.clearInterval(i);
-	}
-
+	timeLeft = 0;
 	highlightLeader();
+
 }
 
 function add(points, teamId) {
@@ -78,54 +82,6 @@ function highlightLeader() {
 	}
 }
 
-function startTimer(duration) {
-	let time = duration * 60000;
-
-	if (!playing) {
-		playing = true;
-		paused = false;
-		displayTime(time);
-		if (time == duration * 60000 && parseInt(periodEl.textContent) < 4) {
-			periodEl.textContent = parseInt(periodEl.textContent) + 1;
-		} else {
-			periodEl.textContent = 0;
-		}
-		setTimeout(() => {
-			playing = false;
-			paused = true;
-			timerEl.textContent = "00:00";
-			// Get a reference to the last interval + 1
-			const interval_id = window.setInterval(function () {},
-			Number.MAX_SAFE_INTEGER);
-
-			// Clear any timeout/interval up to that id
-			for (let i = 0; i < interval_id; i++) {
-				window.clearInterval(i);
-			}
-		}, duration * 60000);
-	}
-
-	if (playing) {
-		setInterval(() => {
-			if (time <= 0) {
-				paused = true;
-				playing = false;
-			} else {
-				time -= 1000;
-			}
-
-			displayTime(time);
-		}, 1000);
-	}
-}
-
-function pause() {
-	if (playing) {
-		paused = true;
-		playing = false;
-	}
-}
-
 function displayTime(time) {
 	let minutes = Math.floor(time / 1000 / 60);
 	let seconds = (time / 1000) % 60;
@@ -140,4 +96,33 @@ function displayTime(time) {
 	timerEl.textContent = minutes + ":" + seconds;
 }
 
-reset();
+function startTimer() {
+	if (!paused) {
+		return
+	} else if (!active && paused) {
+		active = true
+		paused = false
+		timeLeft = gameLength * 60000
+		displayTime(timeLeft)
+		timerId = setInterval(decTime, 1000)
+	} else if (active && paused) {
+		clearInterval(timerId)
+		timerId = setInterval(decTime, 1000)
+	}
+}
+
+function pauseTimer() {
+	if (active && !paused){
+		paused = true
+	clearInterval(timerId)
+	}
+}
+
+function decTime() {
+	if (timeLeft === 0) {
+		reset()
+	} else {
+		timeLeft -= 1000
+		displayTime(timeLeft)
+	}
+}
