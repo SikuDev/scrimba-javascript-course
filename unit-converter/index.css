@@ -24,7 +24,7 @@ p {font-size: 1.4rem;}
 
 .container {
   margin: 2rem 2rem 0;
-  max-width: 40rem;
+  max-width: 55rem;
   background: #1F2937;
   overflow: hidden;
 }
@@ -62,7 +62,7 @@ button {
   margin: 2rem;
   padding: 1.5rem;
   display: grid;
-  height: 10.8rem;
+  min-height: 10.8rem;
   text-align: center;
   background: #273549;
   place-items: center;
