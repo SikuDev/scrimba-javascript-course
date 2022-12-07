@@ -29,7 +29,7 @@ p {font-size: 1.4rem;}
 
 .input-area {
   text-align: center;
-  padding: 4rem;
+  padding: 2rem;
   display: grid;
   justify-items: center;
   row-gap: 2.5rem;
