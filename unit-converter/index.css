@@ -21,16 +21,15 @@ h2 {font-size: 2rem; color: #CCC1FF}
 p {font-size: 1.4rem;}
 
 .container {
-  margin: 4rem auto;
-  max-width: 55rem;
-  height: 72.9rem;
+  margin: 2rem 2rem;
+  max-width: 40rem;
   background: #1F2937;
   overflow: hidden;
 }
 
 .input-area {
   text-align: center;
-  padding: 5rem;
+  padding: 4rem;
   display: grid;
   justify-items: center;
   row-gap: 2.5rem;
