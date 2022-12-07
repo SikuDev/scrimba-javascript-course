@@ -3,6 +3,36 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
+
+        <div class="container">
+            
+            <div class="input-area">
+                <h1>Metric &lt-&gt Imperial Conversion</h1>
+
+                <input type="text" name="input" id="input-el" value="0" inputmode="numeric" autocomplete="off">
+
+                <button id="convert-btn">Convert</button>
+            </div>
+
+            <div class="results-area">
+
+                <div class="result">
+                    <h2>Length ( Meters &lt-&gt Feet )</h2>
+                    <p id="length-el">Text goes here</p>
+                </div>
+
+                <div class="result">
+                    <h2>Volume ( Litres &lt-&gt Gallons )</h2>
+                    <p id="volume-el">Text goes here</p>
+                </div>
+                
+                <div class="result">
+                    <h2>Mass ( Kilograms &lt-&gt Pounds )</h2>
+                    <p id="mass-el">Text goes here</p>
+                </div>
+            </div>
+        </div>
+
         <script src="index.js"></script>
     </body>
 </html>
