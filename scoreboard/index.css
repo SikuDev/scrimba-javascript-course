@@ -68,7 +68,7 @@ body {
 }
 
 .container {
-  margin: 2rem auto 2rem;
+  margin: 5rem auto 2rem;
   max-width: 80rem;
   width: 100%;
   padding: 3rem;
@@ -187,4 +187,26 @@ button:active {
   color: #ffffff;
   box-shadow: 0 0.2rem 0 0.3rem hsl(340, 82%, 42%);
   top: 0.4rem;
+}
+
+header {
+  font-family: 'Tahoma';
+  font-size: 12px;
+  margin: 0 auto;
+  padding: 0.7rem 0.7rem 1rem;
+  min-width: 16rem;
+  width: min-content;
+  border-radius: 0;
+  text-align: center;
+  color: #fff;
+  background: #1c3152;
+  position: sticky;
+  z-index: 999;
+  top: 0;
+  transform: translateX(calc(50vw - 100%));
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+header a {
+  color: #fff;
 }

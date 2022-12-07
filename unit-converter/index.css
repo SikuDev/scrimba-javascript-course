@@ -66,3 +66,22 @@ button {
   background: #273549;
   place-items: center;
 }
+
+header {
+  margin: 0 auto;
+  padding: 0.7rem 0.7rem 1rem;
+  min-width: 15rem;
+  width: min-content;
+  border-radius: 0;
+  text-align: center;
+  color: #CCC1FF;
+  background: #273549;
+  position: sticky;
+  top: 0;
+  transform: translateX(calc(50vw - 100%));
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+header a {
+  color: #CCC1FF;
+}
